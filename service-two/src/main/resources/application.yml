@@ -1,1 +1,13 @@
+spring:
+  application:
+    name: service-two
 
+server:
+  port: 9093
+
+eureka:
+  instance:
+    instance-id: service-002
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/service/
