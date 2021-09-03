@@ -1,2 +1,14 @@
-package com.example.serviceone.Test;public class ServiceTwoConnection {
+package com.example.serviceone.Test;
+
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
+
+public interface ServiceTwoConnection {
+
+    @Headers(value = {"accept: application/json", "content-type: application/json"})
+    @POST("/test")
+    Call<TestResponse> connectServiceTwo(@Body TestRequest request);
 }
